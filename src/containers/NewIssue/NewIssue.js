@@ -6,7 +6,6 @@ import * as actionCreators from "../../store/actions/IssuesActionCreator";
 
 class NewIssue extends React.Component {
   addIssue(issue) {
-    console.log(issue);
     this.props.addIssue(issue);
     this.props.history.push("/");
   }

@@ -19,16 +19,10 @@
       "status": "In Progress"
     },
     {
-      "issueDescription": "qwqw",
-      "severity": "Critical",
-      "status": "In Progress",
-      "id": "6db71c91-23c9-4c2a-845d-82db2b2eaa41"
-    },
-    {
-      "issueDescription": "qwqw",
+      "issueDescription": "Issue Four",
       "severity": "Critical",
       "status": "Closed",
-      "id": "96feb506-8bb7-48f8-a8c2-65d732fc7378"
+      "id": "9b181fca-09ec-4bec-8a38-21bbbfa276b7"
     }
   ]
 }

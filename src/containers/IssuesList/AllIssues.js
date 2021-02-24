@@ -3,13 +3,7 @@ import Issue from "../../components/Issue/Issue";
 import AllIssuesCSS from "./AllIssues.module.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import * as actionCreators from "../../store/actions/IssuesActionCreator";
-
 class AllIssues extends React.Component {
-  componentDidMount() {
-    this.props.getAllIssues();
-  }
-
   render() {
     let issuesList = this.props.issues.map((issue) => (
       <Issue
@@ -47,11 +41,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-// mapDispatcherToProps
-const mapDispatcherToProps = (dispatch) => {
-  return {
-    getAllIssues: () => dispatch(actionCreators.getIssues()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatcherToProps)(AllIssues);
+export default connect(mapStateToProps)(AllIssues);

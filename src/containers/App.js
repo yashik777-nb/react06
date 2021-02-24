@@ -6,8 +6,14 @@ import NotFound from "../containers/NotFound/NotFound";
 import AllIssues from "../containers/IssuesList/AllIssues";
 import About from "../containers/AboutContainer/About";
 import IssueDetail from "../containers/IssuesList/IssueDetail/IssueDetail";
+import { connect } from "react-redux";
+import * as actionCreators from "../store/actions/IssuesActionCreator";
 
-export default class App extends React.Component {
+class App extends React.Component {
+  componentDidMount() {
+    this.props.getAllIssues();
+  }
+
   render() {
     return (
       <BrowserRouter>
@@ -33,3 +39,12 @@ export default class App extends React.Component {
     );
   }
 }
+
+// mapDispatcherToProps
+const mapDispatcherToProps = (dispatch) => {
+  return {
+    getAllIssues: () => dispatch(actionCreators.getIssues()),
+  };
+};
+
+export default connect(null, mapDispatcherToProps)(App);
